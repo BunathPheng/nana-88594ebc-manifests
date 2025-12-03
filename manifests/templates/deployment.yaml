@@ -1,0 +1,25 @@
+---
+# Source: helm for kubernetes/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nana-88594ebc
+  labels:
+    app: nana-88594ebc
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: nana-88594ebc
+  template:
+    metadata:
+      labels:
+        app: nana-88594ebc
+    spec:
+      containers:
+        - name: nana-88594ebc
+          image: docker.io/phengbunath/nana-88594ebc:1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
